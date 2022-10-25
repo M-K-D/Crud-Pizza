@@ -1,1 +1,1 @@
-web: gunicorn crudpizza-wsgi --log-file -
+web: gunicorn crudpizza.wsgi --log-file -

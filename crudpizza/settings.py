@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ond)46^xv9sfzcy!w$^+%s%)ws1%!7xs&1&#5_9p)5wnqw#$xz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['strongmind-pizzacrud-challenge.herokuapp.com', 'localhost']
 
