@@ -8,7 +8,7 @@ def home(request):
   return render(request, 'manager/dashboard.html')
 
 def toppings(request):
-  return HttpResponse('Manage Toppings')
+  return render(request, 'manager/toppings.html')
 
 def pizzas(request):
-  return HttpResponse('Manage pizza recipes')
+  return render(request, 'manager/pizzas.html')
