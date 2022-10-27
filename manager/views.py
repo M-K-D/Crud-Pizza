@@ -46,8 +46,12 @@ def createPizza(request):
   return render(request, 'manager/new_pizza.html', context)
 
 def modifyPizza(request, pk):
+  # handle exceptions thrown when the object does not exist anymore
+  try:
+    pizza = Pizza.objects.get(id=pk)
+  except:
+    return redirect('/pizzas')
 
-  pizza = Pizza.objects.get(id=pk)
   form = PizzaForm(instance=pizza)
   if request.method == 'POST':
     form = PizzaForm(request.POST, instance=pizza)  
@@ -62,8 +66,12 @@ def modifyPizza(request, pk):
   return render(request, 'manager/new_pizza.html', context)
 
 def modifyTopping(request, pk):
+  # Handle exceptions thrown if the obejct does not exist anymore
+  try:
+    topping = Topping.objects.get(id=pk)
+  except:
+    return redirect('/toppings')
 
-  topping = Topping.objects.get(id=pk)
   form = ToppingForm(instance=topping)
   if request.method == 'POST':
     form = ToppingForm(request.POST, instance=topping)  
