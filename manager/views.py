@@ -47,7 +47,19 @@ def createPizza(request):
 
 def modifyPizza(request, pk):
 
-  return null
+  pizza = Pizza.objects.get(id=pk)
+  form = PizzaForm(instance=pizza)
+  if request.method == 'POST':
+    form = PizzaForm(request.POST, instance=pizza)  
+    if form.is_valid():
+      form.save()
+      return redirect('/pizzas')
+
+  context = {'form': form}
+  # Although this is rendering the new_pizza page, it is filling the form
+  # with the data from the selected item and can be modified from there. 
+  # NO need to create another template for the same thing.
+  return render(request, 'manager/new_pizza.html', context)
 
 def modifyTopping(request, pk):
 
