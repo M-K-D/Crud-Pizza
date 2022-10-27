@@ -77,5 +77,19 @@ def modifyTopping(request, pk):
   # NO need to create another template for the same thing.
   return render(request, 'manager/new_topping.html', context)
 
+def deletePizza(request, pk):
+  pizza = Pizza.objects.get(id=pk)
+  if request.method == 'POST':
+    pizza.delete()
+    return redirect('/pizzas')
+  
+  #context = {'pizza': pizza}
+  #return render(request, 'manager/pizzas.html', context)
+
+def deleteTopping(request, pk):
+  topping = Topping.objects.get(id=pk)
+  if request.method == 'POST':
+    topping.delete()
+    return redirect('/toppings')
 
 

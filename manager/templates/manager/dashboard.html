@@ -1,8 +1,6 @@
 {% extends 'manager/boilerplate.html' %}
 
 {% block content %}
-<h1>Manage Pizzas and toppings</h1>
-
 <div class="row">
   <div class="col-md">
     <div class="card card-body">
@@ -10,7 +8,12 @@
     </div>
     <div class="card card-body">
       <table class="table">
-        
+        <a class="btn btn-dark btn-lg btn-block" href="{% url 'pizzas' %}">
+          View and Manage Pizzas
+        </a>
+        <a class="btn btn-dark btn-lg btn-block" href="{% url 'toppings' %}">
+          View and Manage Toppings
+        </a>
       </table>
     </div>
   </div>

@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput
 from django import forms
 from .models import Topping, Pizza
 
@@ -8,12 +8,25 @@ class ToppingForm(ModelForm):
   class Meta:
     model = Topping
     fields = '__all__'
+    widgets = {
+            'name': TextInput(attrs={
+                'class': "form-control",
+                'style': 'max-width: 300px;',
+                'placeholder': 'Cheese, olives, etc..'
+                }),
+        }
 
 class PizzaForm(ModelForm):
   class Meta:
     model = Pizza
-    fields = ('name','toppings',)
-
+    fields = ['name','toppings',]
+    widgets = {
+            'name': TextInput(attrs={
+                'class': "form-control",
+                'style': 'max-width: 300px;',
+                'placeholder': 'Masterpiece'
+                }),
+        }
 
   toppings = forms.ModelMultipleChoiceField(
         queryset= Topping.objects.all(),
