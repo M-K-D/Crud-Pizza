@@ -6,10 +6,17 @@ from .fields import CaseInsensitiveCharField
 
 
 class Topping(models.Model):
-  topping_name = CaseInsensitiveCharField(max_length=100, null=True, unique=True)
+  name = CaseInsensitiveCharField(max_length=100, null=True, unique=True)
   quantity = models.PositiveIntegerField(null=True)
 
+  def __str__(self):
+    return self.name
+
+
 class Pizza(models.Model):
-  pizza_name = CaseInsensitiveCharField(max_length=100, null=True)
+  name = CaseInsensitiveCharField(max_length=100, null=True, unique=True)
   # on_delete = null will ensure that the pizza still exists after
   toppings = models.ManyToManyField(Topping)
+
+  def __str__(self):
+    return self.name

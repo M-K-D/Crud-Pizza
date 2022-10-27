@@ -6,4 +6,5 @@ urlpatterns = [
     path('toppings/', views.toppings),
     path('pizzas/', views.pizzas),
     path('new_topping/', views.createTopping),
+    path('new_pizza/', views.createPizza),
 ]

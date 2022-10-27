@@ -1,15 +1,23 @@
 {% extends 'manager/boilerplate.html' %}
 
 {% block content %}
-<h1>Manage Pizzas and toppings</h1>
+<h1>Manage Pizzas</h1>
 
 <div class="row">
   <div class="col-md">
+  
     <div class="card card-body">
-      <h5>Pizzas</h5>
-    </div>
-    <div class="card card-body">
-      <table class="table">
+      <table class="table table-sm">
+        <tr>
+          <th>Pizza</th>
+          <th>Toppings</th>
+        </tr>
+        {% for pizza in pizzas %}
+        <tr>
+          <td>{{pizza.name}}</td>
+          <td>{{pizza.toppings}}</td>
+        </tr>
+        {% endfor %}
         
       </table>
     </div>
