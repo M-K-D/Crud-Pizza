@@ -17,26 +17,19 @@ After all dependencies are installed, you can now start the local web server: py
 
 COPY AND MODIFY THIS AT A LATER POINT -----------------------------------------------------------------------------------------
 # Install and Build Locally
-### Mac
+### For Mac
 
-Download the repository and store in desired location, then:
+Download the repository and store in desired location, then in source directory:
 
 * Install homebrew, if you don't already have it
 * Install python 3.10 with homebrew ```brew install python@3.10```
 * While a virtual environment is not necessary, it is good practice to use with new projects. Install virtualenv and virtualenvwrapper ```pip install virtualenv virtualenvwrapper```
+* Create virtual environment for project ```mkvirtualenv project_name -p /opt/homebrew/opt/python@3.10/bin/python3```
+* Install project requirements pip install -r requirements.txt
     
-    create virtual environment for project mkvirtualenv project_name -p /opt/homebrew/opt/python@3.10/bin/python3
-    install project requirements pip install -r requirements.txt
-known issues and fixes
+### For Windows
 
-If your system python does not include pip, you will need to make sure pip is installed :
-
-python -m ensurepip # if your system python is at least 3.4
-
-If your system python isn't at least 3.4, you will need to use your system package manager to install pip.
-windows
-
-In this source directory:
+In source directory:
 
     install python
     open project in pycharm
