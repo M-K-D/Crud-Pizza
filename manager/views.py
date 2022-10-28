@@ -82,20 +82,28 @@ def modifyTopping(request, pk):
   context = {'form': form}
   # Although this is rendering the new_topping page, it is filling the form
   # with the data from the selected item and can be modified from there. 
-  # NO need to create another template for the same thing.
+  # Not necessary to create another template for the same thing.
   return render(request, 'manager/new_topping.html', context)
 
 def deletePizza(request, pk):
-  pizza = Pizza.objects.get(id=pk)
+  # handle exceptions thrown when the object does not exist anymore
+  try:
+    pizza = Pizza.objects.get(id=pk)
+  except:
+    return redirect('/pizzas')
+
   if request.method == 'POST':
     pizza.delete()
     return redirect('/pizzas')
   
-  #context = {'pizza': pizza}
-  #return render(request, 'manager/pizzas.html', context)
 
 def deleteTopping(request, pk):
-  topping = Topping.objects.get(id=pk)
+  # Handle exceptions thrown if the obejct does not exist anymore
+  try:
+    topping = Topping.objects.get(id=pk)
+  except:
+    return redirect('/toppings')
+
   if request.method == 'POST':
     topping.delete()
     return redirect('/toppings')

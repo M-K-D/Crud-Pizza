@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ond)46^xv9sfzcy!w$^+%s%)ws1%!7xs&1&#5_9p)5wnqw#$xz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['strongmind-pizzacrud-challenge.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['mkd-crud.herokuapp.com', 'localhost']
 
 
 # Application definition
