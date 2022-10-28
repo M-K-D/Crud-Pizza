@@ -16,8 +16,8 @@ NOTE: Whitenoise is not necessary for running locally
 After all dependencies are installed, you can now start the local web server: python manage.py runserver
 
 COPY AND MODIFY THIS AT A LATER POINT -----------------------------------------------------------------------------------------
-#Install and Build Locally
-###Mac
+# Install and Build Locally
+### Mac
 
 Download the repository and store in desired location, then:
 
