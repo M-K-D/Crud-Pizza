@@ -12,5 +12,10 @@ class TestModels(TestCase):
     self.assertEquals(self.topping.quantity, 10)
 
   def test_pizza(self):
-    self.pizza = Pizza.objects.create(name='test')
-    self.assertEquals(self.pizza.name, 'test')
+    pizza = Pizza.objects.create(name="test")
+    topping1 = Topping.objects.create(name="topping1")
+    topping2 = Topping.objects.create(name="topping2")
+    pizza.toppings.set([topping1.pk, topping2.pk])
+
+    self.assertEqual(pizza.toppings.count(), 2)
+    self.assertEqual(pizza.name, 'test')
