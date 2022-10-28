@@ -1,0 +1,1 @@
+web: gunicorn crudpizza.wsgi --log-file -

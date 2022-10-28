@@ -1,0 +1,21 @@
+{% extends 'manager/boilerplate.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md">
+    <div class="card card-body">
+      <h5>What would you like to do?</h5>
+    </div>
+    <div class="card card-body">
+      <table class="table">
+        <a class="btn btn-dark btn-lg btn-block" href="{% url 'pizzas' %}">
+          View and Manage Pizzas
+        </a>
+        <a class="btn btn-dark btn-lg btn-block" href="{% url 'toppings' %}">
+          View and Manage Toppings
+        </a>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

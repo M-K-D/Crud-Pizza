@@ -1,0 +1,19 @@
+{% extends 'manager/boilerplate.html' %}
+{%block content%}
+
+<div class="container">
+  <div class="d-flex justify-content-center">    
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="form-group p-2">
+        <h2>New Pizza</h2>
+        {{form}}
+      </div>
+      <div class="form-group p-2">
+        <button class="btn btn-primary" type="submit" name="submit">Create</button>
+        <a class="btn btn-secondary" href="{% url 'pizzas' %}">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{%endblock%}
