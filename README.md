@@ -22,8 +22,9 @@ COPY AND MODIFY THIS AT A LATER POINT ------------------------------------------
 Download the repository and store in desired location, then:
 
 * Install homebrew, if you don't already have it
-* Install python 3.10 using homebrew brew install python@3.10
-    install virtualenv and virtualenvwrapper pip install virtualenv virtualenvwrapper
+* Install python 3.10 with homebrew ```brew install python@3.10```
+* While a virtual environment is not necessary, it is good practice to use with new projects. Install virtualenv and virtualenvwrapper ```pip install virtualenv virtualenvwrapper```
+    
     create virtual environment for project mkvirtualenv project_name -p /opt/homebrew/opt/python@3.10/bin/python3
     install project requirements pip install -r requirements.txt
 known issues and fixes
