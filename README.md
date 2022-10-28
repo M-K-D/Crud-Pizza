@@ -16,13 +16,13 @@ NOTE: Whitenoise is not necessary for running locally
 After all dependencies are installed, you can now start the local web server: python manage.py runserver
 
 COPY AND MODIFY THIS AT A LATER POINT -----------------------------------------------------------------------------------------
-A set of comprehensive instructions to install from scratch on a developer workstation. We suggest you test these with a member from another team. For example:
-mac
+#Install and Build Locally
+###Mac
 
-In this source directory:
+Download the repository and store in desired location, then:
 
-    install homebrew
-    install python 3.10 using homebrew brew install python@3.10
+    * Install homebrew, if you don't already have it
+    * install python 3.10 using homebrew brew install python@3.10
     install virtualenv and virtualenvwrapper pip install virtualenv virtualenvwrapper
     create virtual environment for project mkvirtualenv project_name -p /opt/homebrew/opt/python@3.10/bin/python3
     install project requirements pip install -r requirements.txt
