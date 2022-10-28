@@ -13,7 +13,7 @@ Download the repository and store in desired location, then in source directory:
 * Install homebrew, if you don't already have it
 * Install python 3.8.8 with homebrew ```brew install python@3.8.8```
 * While a virtual environment is not necessary, it is good practice to use with new projects. Install virtualenv and virtualenvwrapper ```pip install virtualenv virtualenvwrapper```
-* Create virtual environment for project ```mkvirtualenv project_name -p /opt/homebrew/opt/python@3.10/bin/python3```
+* Create virtual environment for project ```mkvirtualenv project_name -p /opt/homebrew/opt/python@3.8.8/bin/python3```
 * Install project requirements ```pip install -r requirements.txt```
     
 ### For Windows
@@ -37,3 +37,5 @@ Download the repository and store in desired location, then in source directory:
 
 Once the server is running, the app will be available in your browser at ```localhost```
 
+# Known Issues
+* Python 3.10 will cause issues with the dependency 'pandas'. Please use Python 3.8.8.
