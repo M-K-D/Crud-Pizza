@@ -16,7 +16,7 @@ NOTE: Whitenoise is not necessary for running locally
 After all dependencies are installed, you can now start the local web server: python manage.py runserver
 
 COPY AND MODIFY THIS AT A LATER POINT -----------------------------------------------------------------------------------------
-# Install and Run Locally
+# Install Locally
 ### For Mac
 
 Download the repository and store in desired location, then in source directory:
@@ -37,27 +37,14 @@ Download the repository and store in desired location, then in source directory:
 # Running Local Server and Tests
 
 ### Mac
-* Open terminal
-* Inside the source directory ```python manage.py runserver```
-* App is now running locally on localhost
+* Open terminal and navigate to source directory
+* For running local server: ```python manage.py runserver```
 * For tests: ```python manage.py test manager```
 
 ### Windows
-* Open CMD
-* Inside the source directory ```py manage.py runserver```
-* * For tests: ```py manage.py test manager```
-* App is now running locally on localhost
-* For tests: ```python manage.py test manager```
+* Open CMD and navigate to source directory
+* For running local server: ```py manage.py runserver```
+* For tests: ```py manage.py test manager```
 
-# Running Tests
-If you'd like to run test cases locally
-* 
+Once the server is running, the app will be available in your browser at ```localhost```
 
-A set of instructions to run service locally, for example:
-mac (service)
-
-python manage.py runserver
-
-windows (service)
-
-py manage.py runserver
