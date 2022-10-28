@@ -16,34 +16,42 @@ NOTE: Whitenoise is not necessary for running locally
 After all dependencies are installed, you can now start the local web server: python manage.py runserver
 
 COPY AND MODIFY THIS AT A LATER POINT -----------------------------------------------------------------------------------------
-# Install and Build Locally
+# Install and Run Locally
 ### For Mac
 
 Download the repository and store in desired location, then in source directory:
 
 * Install homebrew, if you don't already have it
-* Install python 3.10 with homebrew ```brew install python@3.10```
+* Install python 3.8.8 with homebrew ```brew install python@3.8.8```
 * While a virtual environment is not necessary, it is good practice to use with new projects. Install virtualenv and virtualenvwrapper ```pip install virtualenv virtualenvwrapper```
 * Create virtual environment for project ```mkvirtualenv project_name -p /opt/homebrew/opt/python@3.10/bin/python3```
-* Install project requirements pip install -r requirements.txt
+* Install project requirements ```pip install -r requirements.txt```
     
 ### For Windows
 
-In source directory:
+* Install python if you don't already have it(Python 3.8.8)
+* Open CMD and navigate to source directory
+* Install project requirements ```pip install -r requirements.txt``` 
 
-    install python
-    open project in pycharm
-    set interpreter installed python 3.10
-    open shell
-    install project requirements pip install -r requirements.txt
 
-Run tests locally
+# Running Local Server and Tests
 
-A set of instructions to run tests locally, for example:
+### Mac
+* Open terminal
+* Inside the source directory ```python manage.py runserver```
+* App is now running locally on localhost
+* For tests: ```python manage.py test manager```
 
-pytest
+### Windows
+* Open CMD
+* Inside the source directory ```py manage.py runserver```
+* * For tests: ```py manage.py test manager```
+* App is now running locally on localhost
+* For tests: ```python manage.py test manager```
 
-Run service locally
+# Running Tests
+If you'd like to run test cases locally
+* 
 
 A set of instructions to run service locally, for example:
 mac (service)
