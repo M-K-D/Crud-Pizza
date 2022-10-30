@@ -1,13 +1,12 @@
 from django.db import models
 from pandas import unique
-#from django.db.models import UniqueConstraint
-#from django.db.models.functions import Lower
+from django.core.validators import MaxValueValidator
 from .fields import CaseInsensitiveCharField
 
 
 class Topping(models.Model):
   name = CaseInsensitiveCharField(max_length=100, null=True, unique=True)
-  quantity = models.PositiveIntegerField(null=True)
+  quantity = models.PositiveIntegerField(null=True, validators=[MaxValueValidator(1000000)])
 
   def __str__(self):
     return self.name

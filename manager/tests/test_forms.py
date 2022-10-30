@@ -13,9 +13,15 @@ class TestForms(TestCase):
     self.assertTrue(form.is_valid())
 
   def test_topping_form(self):
-    form = ToppingForm(data={
+    validForm = ToppingForm(data={
       'name':'test_topping',
       'quantity':5
     })
 
-    self.assertTrue(form.is_valid())
+    invalidForm = ToppingForm(data={
+      'name':'test_topping',
+      'quantity':10000000 # Too large
+    })
+
+    self.assertTrue(validForm.is_valid())
+    self.assertFalse(invalidForm.is_valid())
