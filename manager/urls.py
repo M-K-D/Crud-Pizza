@@ -3,6 +3,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # giving the pattern a name value allows you to access the url from a template(html)
     path('', views.home, name="home"),
     path('toppings/', views.toppings, name="toppings"),
     path('pizzas/', views.pizzas, name="pizzas"),
